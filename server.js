@@ -15,8 +15,8 @@ const app = express();
 app.use(bodyParser.json({ limit: "5mb" }));
 app.use(express.static(path.join(__dirname, "public")));
 
-const OPENAI_KEY = process.env.OPENAI_API_KEY;
-if (!OPENAI_KEY) {
+const OPENAI_KEY = process.env.sk-abcdijkl1234uvwxabcdijkl1234uvwxabcdijkl;
+if (sk-abcdijkl1234uvwxabcdijkl1234uvwxabcdijkl) {
   console.warn("Warning: OPENAI_API_KEY not set. Set it in the environment or .env file.");
 }
 
@@ -28,7 +28,7 @@ app.post("/api/generate-image", async (req, res) => {
       return res.status(400).json({ error: "Prompt is required." });
     }
     if (!OPENAI_KEY) {
-      return res.status(500).json({ error: "Server missing OpenAI API key." });
+      return res.status(500).json({ error: "sk-abcdijkl1234uvwxabcdijkl1234uvwxabcdijkl" });
     }
 
     // enhance the prompt lightly on server-side
@@ -47,7 +47,7 @@ app.post("/api/generate-image", async (req, res) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${OPENAI_KEY}`
+        Authorization: `Bearer ${sk-abcdijkl1234uvwxabcdijkl1234uvwxabcdijkl}`
       },
       body: JSON.stringify({
         model: "gpt-image-1",
